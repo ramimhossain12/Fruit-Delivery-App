@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Fruit Delivery App</string>
+    <string name="apple">Apples are among the world\'s most popular fruits. They grow on the apple tree (Malus domestica), originally from Central Asia. Apples are high in fiber, vitamin C, and various antioxidants. They are also very filling, considering their low calorie count.</string>
+    <string name="banana">It is loaded with essential vitamins and minerals such as potassium, calcium, manganese, magnesium, iron, folate, niacin, riboflavin, and B6. These all contribute to the proper functioning of the body and keeping you healthy. The high content of potassium in bananas makes it a super fruit.</string>
 
 
     <string-array name="fruitName">

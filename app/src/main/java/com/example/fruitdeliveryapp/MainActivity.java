@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,6 +42,32 @@ public class MainActivity extends AppCompatActivity {
 
          recyclerView.setAdapter(myAdapter);
          recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+
+        myAdapter.setOnItemClickListener(new MyAdapter.ClickListener() {
+            @Override
+            public void onItemClick(int position, View view) {
+
+
+                     if (position==0){
+                         Intent intent = new Intent(MainActivity.this,AppleActivity.class);
+                         startActivity(intent);
+                     }
+                if (position==1){
+                    Intent intent = new Intent(MainActivity.this,BananaActivity.class);
+                    startActivity(intent);
+                }
+
+
+
+
+            }
+
+            @Override
+            public void onItemLongClick(int position, View view) {
+
+            }
+        });
 
     }
 
