@@ -10,7 +10,7 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-  MyAdapter myAdapter;
+    MyAdapter myAdapter;
     RecyclerView recyclerView;
     int[] images = {R.drawable.apple,
 
@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
     };
 
 
-    String[] name,  price;
+    String[] name, price;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
         price = getResources().getStringArray(R.array.price);
 
 
-         myAdapter = new MyAdapter(this,name,price,images);
+        myAdapter = new MyAdapter(this, name, price, images);
 
-         recyclerView.setAdapter(myAdapter);
-         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(myAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
         myAdapter.setOnItemClickListener(new MyAdapter.ClickListener() {
@@ -49,16 +50,25 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(int position, View view) {
 
 
-                     if (position==0){
-                         Intent intent = new Intent(MainActivity.this,AppleActivity.class);
-                         startActivity(intent);
-                     }
-                if (position==1){
-                    Intent intent = new Intent(MainActivity.this,BananaActivity.class);
+                if (position == 0) {
+                    Intent intent = new Intent(MainActivity.this, AppleActivity.class);
+                    startActivity(intent);
+                }
+                if (position == 1) {
+                    Intent intent = new Intent(MainActivity.this, BananaActivity.class);
+                    startActivity(intent);
+                }
+
+                if (position == 5) {
+                    Intent intent = new Intent(MainActivity.this, GuavaActivity.class);
                     startActivity(intent);
                 }
 
 
+                if (position == 6) {
+                    Intent intent = new Intent(MainActivity.this, LemonActivity.class);
+                    startActivity(intent);
+                }
 
 
             }
